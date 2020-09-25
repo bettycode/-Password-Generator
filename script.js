@@ -57,27 +57,24 @@ function generatePassword(){
     
     // creat a loop to generate the randomly from the arrays and store it in an empty array
        for(var i = 0; i<passwordLength; i++){
-         var randomArrayNum;
-         var selectedAarry;
-         var randomNum;
-         var randmCharacter;
-
-
+        
          //generate rundom number
-         
+         var randomArrayNum;
          randomArrayNum = parseInt(Math.floor(Math.random()*receiverArray.length ));
          
          //generate random number for selected array
-          
+         var selectedAarry; 
          selectedAarry = receiverArray[randomArrayNum];
-
+         
+         //stores random number based on length of selected array
+         var randomNum;
          randomNum = Math.floor(Math.random()* selectedAarry.length);
           
-
+         var randmCharacter;
          randmCharacter = selectedAarry[randomNum];
 
 
-
+           //combine the string and return passwordText
          passwordText += randmCharacter;
 
 
