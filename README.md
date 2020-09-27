@@ -11,4 +11,4 @@
 
      The following image demonstrates the application functionality:
        
-       ![password generator](./asset/pg.png)
+       ![password generator](/asset/pg.png)
