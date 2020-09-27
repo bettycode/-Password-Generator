@@ -1,5 +1,5 @@
-//create all the arrays
-var receiverArray = [];
+//create all the arrays 
+var receiverCharArray = [];
 var lowerCase = [
   "a",
   "b",
@@ -79,7 +79,7 @@ var special = [
   "?",
   "/",
 ];
-//create a function and confirm input
+//create a function and confirm inputs
 function generatePassword() {
   var passwordText = "";
 
@@ -98,21 +98,21 @@ function generatePassword() {
   ) {
     alert("Pleas select atlist one character!");
   }
-  // if all are true store them in the reciverArray.
+  // if all the inputs are true store them in the reciverCharArray.
   if (myLowerCase === true) {
-    receiverArray.push(lowerCase);
+    receiverCharArray.push(lowerCase);
   }
 
   if (myUppercase === true) {
-    receiverArray.push(upperCase);
+    receiverCharArray.push(upperCase);
   }
 
   if (myNumeric === true) {
-    receiverArray.push(numeric);
+    receiverCharArray.push(numeric);
   }
 
   if (mySpecial === true) {
-    receiverArray.push(special);
+    receiverCharArray.push(special);
   }
   //prompt for the length of the password
   var passwordLength = parseInt(
@@ -140,17 +140,17 @@ function generatePassword() {
     return;
   }
 
-  // creat a loop to generate the randomly from the arrays and store it in an empty array and return.
+  // creat a loop to generate the password randomly from the array.
   for (var i = 0; i < passwordLength; i++) {
     //generate rundom number
 
     var randomArrayNum = parseInt(
-      Math.floor(Math.random() * receiverArray.length)
+      Math.floor(Math.random() * receiverCharArray.length)
     );
     console.log("RandomArrayNum", randomArrayNum);
     //generate random number for selected array
-    console.log(receiverArray);
-    var selectedAarry = receiverArray[randomArrayNum];
+    console.log(receiverCharArray);
+    var selectedAarry = receiverCharArray[randomArrayNum];
     console.log("SeletecdArray", selectedAarry);
     //stores random number based on length of selected array
 
@@ -167,7 +167,7 @@ function generatePassword() {
     console.log("==========");
   }
 
-  //generat function to translate the empty array to display on click
+  
   console.log("your password is" + passwordText);
   //alert("your password is" + passwordText);
   return passwordText;
